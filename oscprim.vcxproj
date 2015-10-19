@@ -44,8 +44,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\cores\maple;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\variants\discovery_f407;E:\Pasha\cube_android\stm32f4\oscprim;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\libraries\FreeRTOS;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\libraries\FreeRTOS\utility;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\libraries;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\Pasha\Documents\Arduino\libraries;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\cores\maple/libmaple;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\4.8.3-2014q1\include;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\4.8.3-2014q1\include;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>E:\Pasha\cube_android\stm32f4\oscprim\Visual Micro\.oscprim.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\cores\maple;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\variants\discovery_f407;E:\Pasha\cube_android\Osc\stm;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\libraries\FreeRTOS;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\libraries\FreeRTOS\utility;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\libraries;E:\Pasha\ProgramFiles\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2-ESP\arduino-1.6.5-r2\hardware\Arduino_STM32\STM32F4\libraries;C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;C:\Users\Pasha\Documents\Arduino\libraries;{build.core.path}/libmaple;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\4.8.3-2014q1\include;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\4.8.3-2014q1\include;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include;C:\Users\Pasha\AppData\Roaming\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\lib\gcc\arm-none-eabi\4.8.3\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>E:\Pasha\cube_android\Osc\stm\Visual Micro\.stm.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>BOARD_discovery_f407;VECT_TAB_BASE;ERROR_LED_PORT=GPIOD;ERROR_LED_PIN=14;F_CPU=168000000L;ARDUINO=165;ARDUINO_STM32DiscoveryF407;ARDUINO_ARCH_STM32F4;MCU_STM32F406VG;STM32_HIGH_DENSITY;STM32F2;__cplusplus;GCC_VERSION=40803;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -68,19 +68,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="adc.ino" />
-    <None Include="CMDcgmi.ino" />
-    <None Include="CMDstart.ino" />
+    <None Include="adc.ino">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="CMDcgmi.ino">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="CMDstart.ino">
+      <FileType>CppCode</FileType>
+    </None>
     <None Include="comand.ino">
       <FileType>CppCode</FileType>
     </None>
-    <None Include="DBG.ino" />
+    <None Include="DBG.ino">
+      <FileType>CppCode</FileType>
+    </None>
     <None Include="oscprim.ino">
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Visual Micro\.oscprim.vsarduino.h" />
+    <ClInclude Include="Visual Micro\.stm.vsarduino.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,3 +1,5 @@
+
+#define ADC_LED_PIN BOARD_LED_PIN+1
 #define MAX_RELOAD ((1 << 16) - 1)
 HardwareTimer timer(2);
 int Value = 0;
@@ -8,6 +10,7 @@ static void vADCTask(void *pvParameters) {
     
     pinMode(PA7, INPUT_ANALOG);
 
+    pinMode(ADC_LED_PIN, OUTPUT);
 
     adc_init(ADC1);
     adc_set_sample_rate(ADC1, ADC_SMPR_1_5); // Sample rate?
@@ -29,7 +32,11 @@ static void vADCTask(void *pvParameters) {
         if (!xQueueReceive(ADCQueue, &element, portMAX_DELAY))
             continue;
         if (element == 1){
+
+            digitalWrite(ADC_LED_PIN, 1);
             Value = analogRead(PA7);
+            digitalWrite(ADC_LED_PIN, 0);
+
             debug_println("ADC get result");
             WIFI.print("+start: ");
             WIFI.println(Value);
@@ -38,10 +45,14 @@ static void vADCTask(void *pvParameters) {
         else if (element > 1)
         {
             debug_println("Start conversation");
+
+            digitalWrite(ADC_LED_PIN, 1);
             for (int i = 0; i < element; ++i)
             {
                 buffer[element]=analogRead(PA7);
             }
+            digitalWrite(ADC_LED_PIN, 0);
+
             debug_println("ADC get result");
             for (int i = 0; i < element; ++i)
             {
