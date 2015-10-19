@@ -49,16 +49,21 @@ static void vADCTask(void *pvParameters) {
             digitalWrite(ADC_LED_PIN, 1);
             for (int i = 0; i < element; ++i)
             {
-                buffer[element]=analogRead(PA7);
+                buffer[i]=analogRead(PA7);
             }
             digitalWrite(ADC_LED_PIN, 0);
 
             debug_println("ADC get result");
-            for (int i = 0; i < element; ++i)
+            WIFI.print("+adc;");
+            WIFI.print(element);
+            WIFI.print(":");
+            for (int i = 0; i < element-1; ++i)
             {
-                WIFI.print("+start: ");
-                WIFI.println(buffer[element]);
+                WIFI.print(buffer[i]);
+                WIFI.print(",");
+
             }
+            WIFI.println(buffer[element-1]);
             WIFI.println("OK");
         }
     }
