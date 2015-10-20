@@ -1,5 +1,6 @@
 
-#define ADC_LED_PIN BOARD_LED_PIN+1
+#define ADC_LED_PIN BOARD_LED_PIN+2
+#define ADC_DBG_PIN BOARD_LED_PIN+1
 #define MAX_RELOAD ((1 << 16) - 1)
 HardwareTimer timer(2);
 int Value = 0;
@@ -11,6 +12,8 @@ static void vADCTask(void *pvParameters) {
     pinMode(PA7, INPUT_ANALOG);
 
     pinMode(ADC_LED_PIN, OUTPUT);
+    pinMode(ADC_DBG_PIN, OUTPUT);
+    
 
     adc_init(ADC1);
     adc_set_sample_rate(ADC1, ADC_SMPR_1_5); // Sample rate?
@@ -49,6 +52,7 @@ static void vADCTask(void *pvParameters) {
             digitalWrite(ADC_LED_PIN, 1);
             for (int i = 0; i < element; ++i)
             {
+                togglePin(ADC_DBG_PIN);
                 buffer[i]=analogRead(PA7);
             }
             digitalWrite(ADC_LED_PIN, 0);
