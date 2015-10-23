@@ -1,2 +1,0 @@
-# TestOsc
-Wifi Osciloscope project
