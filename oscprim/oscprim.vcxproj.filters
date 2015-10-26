@@ -21,12 +21,16 @@
     <None Include="adc.ino" />
     <None Include="CMDstart.ino" />
     <None Include="CMDcgmi.ino" />
+    <None Include="adf.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Visual Micro\.oscprim.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Visual Micro\.stm.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adf4602.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

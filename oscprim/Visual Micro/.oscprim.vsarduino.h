@@ -48,5 +48,7 @@
 #include <CMDstart.ino>
 #include <DBG.ino>
 #include <adc.ino>
+#include <adf.ino>
+#include <adf4602.h>
 #include <comand.ino>
 #endif

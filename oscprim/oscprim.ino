@@ -45,6 +45,7 @@ WIFI.begin(115200);
    xTaskCreate(vCPUTask,  (signed portCHAR *)"CPU", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
    xTaskCreate(vWIFITask, (signed portCHAR *)"CMD", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
    xTaskCreate(vADCTask,  (signed portCHAR *)"ADC", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+   xTaskCreate(vADFTask, (signed portCHAR *)"ADF", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
    vTaskStartScheduler();
 }
 

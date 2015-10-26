@@ -54,6 +54,8 @@ static void vADCTask(void *pvParameters) {
             {
                 togglePin(ADC_DBG_PIN);
                 buffer[i]=analogRead(PA7);
+                delay_us(2);
+
             }
             digitalWrite(ADC_LED_PIN, 0);
 

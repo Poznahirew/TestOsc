@@ -21,6 +21,8 @@ static const CommandHandlers HANDLERS[] = {
         { "gomno", &gomno_get, &gomno_set, &defaultHandler, &defaultHandler },
         { "start", &start_get, &start_set, &defaultHandler, &defaultHandler },
         { "cgmi", &defaultHandler, &defaultSetHandler, &defaultHandler, &cgmi_get },
+        { "gain", &defaultHandler, &gain_set, &defaultHandler, &defaultHandler },
+        { "arfcn", &defaultHandler, &arfcn_set, &defaultHandler, &defaultHandler },
 };
 
 static const int HANDLER_COUNT = sizeof(HANDLERS) / sizeof(HANDLERS[0]);
